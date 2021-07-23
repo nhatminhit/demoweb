@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Chat Realtime</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+        background-image: url('https://img3.thuthuatphanmem.vn/uploads/2019/10/19/anh-nen-trai-tim-cho-pc_045636493.jpg');
+        background-size: cover;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Chat Realtime!</h1>
+        <form>
+            <input id="message" type="text" placeholder="Nhập tin nhắn vào đây">
+            <input type="submit"  value="Gửi tin nhắn">
+        </form>
+        <ul  id="thread"></ul>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
