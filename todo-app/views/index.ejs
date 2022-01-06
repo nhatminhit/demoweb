@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        li {
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid black;
+            list-style-type: none;
+            margin-left: -30px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            width: 50px;
+            position: absolute;
+            right: 30px;
+            top: 5px;
+            text-decoration: none;
+            background-color: gray;
+            width: 70px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to my todo app</h1>
+        <form action="/add/todo" method="POST">
+            <input type="text" name="todo" placeholder="Enter Todo">
+            <input type="submit" value="Add Todo">
+        </form>
+        <ul>
+            <% todo.forEach(todos => { %>
+                <li>
+                    <%= todos.todo %>
+                        <a href="/delete/todo/<%= todos._id %>">delete</a>
+                </li>
+                <%})%>
+        </ul>
+    </div>
+</body>
+
+</html>
